@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+    <variable
+        name="viewModel"
+        type="jp.shiita.realmlivedata.ui.EditViewModel"/>
+</data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.EditActivity">
+
+    <EditText
+        android:id="@+id/edit_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="edit_text1"
+        android:text="@={viewModel.simpleText1.text}"/>
+
+    <EditText
+        android:id="@+id/edit_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="edit_text2"
+        android:text="@={viewModel.simpleText1.text}"/>
+
+    <Button
+        android:id="@+id/observe_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="observe"/>
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove"/>
+</LinearLayout>
+</layout>
